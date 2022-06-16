@@ -181,7 +181,7 @@ void Search()
 void Sort_by_id()
 {
     int mode = 0;
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 99; i++)
     {
         for (int j = 0; j < 12; j++)
         {
@@ -231,5 +231,4 @@ void Create_Excel (int mode)
         fprintf(fp_txt, "%s\t%s\t%lld\t%d\t%d\t%d\t%d\n",students[i].first_name,students[i].last_name,students[i].id_number_full,students[i].C_grade,students[i].C_regrade,students[i].C_regrade,students[i].GPA,students[i].rank);
     }
 	fclose(fp_txt);
-
 }
