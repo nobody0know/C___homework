@@ -68,12 +68,12 @@ int main()
         case 5:
             Sort_by_id();
             printf("output all students info to excel calls: 'students_id_sort.xls'..........\n");
-            Create_Excel(0);
+            Create_Excel(0);//使用时请注意修改路径！！！！！！！！！！！！！！！！！！！！
             break;
         case 6:
             Sort_by_score();
             printf("output all students info to excel calls: 'students_score_sort.xls'..........\n");
-            Create_Excel(1);
+            Create_Excel(1);//使用时请注意修改路径！！！！！！！！！！！！！！！！！！！！
             break;
         case 7:
             Max();
@@ -535,7 +535,7 @@ void Create_Excel (int mode)
 	fprintf(fp_txt, "%s\t%s\t%s\t%s\t%s\t%s\t%s\n","first name","last name", "id","C score","C rescore","GPA","rank");
     for (int i = 0; i < stu_count; i++)
     {
-        fprintf(fp_txt, "%s\t%s\t%lld\t%d\t%d\t%c\t%d\n",students[i].first_name,students[i].last_name,students[i].id_number_full,students[i].C_grade,students[i].C_regrade,students[i].C_regrade,students[i].GPA,students[i].rank);
+        fprintf(fp_txt, "%s\t%s\t%lld\t%d\t%d\t%s\t%d\n",students[i].first_name,students[i].last_name,students[i].id_number_full,students[i].C_grade,students[i].C_regrade,students[i].C_regrade,students[i].GPA,students[i].rank);
     }
 	fclose(fp_txt);
 }
